@@ -29,7 +29,7 @@ const getDataToLS = () =>{
   const totalDeposit = localStorage.getItem('Deposit');
   const totalWithdraw = localStorage.getItem('Withdraw');
   const totalBalance = localStorage.getItem('Balance');
-  if(isNaN(totalDeposit,totalWithdraw,totalBalance)){
+  if(totalDeposit === null || totalWithdraw === null || totalBalance === null){
     return;
   }
   setTextElementValueById('deposit-total',totalDeposit);
